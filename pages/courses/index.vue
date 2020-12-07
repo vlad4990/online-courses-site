@@ -1,21 +1,25 @@
 <template>
 <div>
-  <h1>hello</h1>
-  <v-course-item
-    v-for="course in COURSES"
-    :key="course.id"
-    :course_data="course"
-  />
+  <div class="courses_catalog">
+    <h1>Список всех курсов</h1>
+    <NuxtLink to="/courses/add" type="button" class="btn btn-primary btn-lg btn-danger">Добавить Курс</NuxtLink>
+  </div>
+  <div class="courses_catalog__items">
+    <v-display-catalog
+      :catalog_courses="COURSES"
+    />
+  </div>
 </div>
 </template>
 
 <script>
 import VCourseItem from "~/components/v-course-item"
 import {mapGetters, mapActions} from 'vuex'
+import VDisplayCatalog from "~/components/v-display-catalog";
 export default {
   name: "index",
   components:{
-    VCourseItem
+    VDisplayCatalog
   },
   methods:{
 
@@ -29,6 +33,15 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.courses_catalog{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+},
+.courses_catalog__items{
 
+}
 </style>

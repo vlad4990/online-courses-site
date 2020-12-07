@@ -1,21 +1,23 @@
 <template>
-<div>
+<div :delem="lol=!lol">
   <div class="course-item card" style="width: 18rem;">
-    <img :src="require('../assets/images/' + course_data.image) " class="card-img-top" alt="...">
+    <img v-if="course_data.id < 7" :src="require('../assets/images/' + course_data.id + '.jpg') " class="card-img-top" alt="require('../assets/images/1.jpg') ">
+    <img v-else :src="require('../assets/images/7.jpg') " class="card-img-top" alt="require('../assets/images/1.jpg') ">
     <div class="card-body">
       <h5 class="card-title">{{course_data.name}}</h5>
-      <p class="card-text">{{course_data.description}}</p>
+      <p class="card-text border">{{course_data.description}}</p>
       <h5 class="card-title">Дата начала курса: <br/>{{new Date(course_data.date).getUTCDate()+1}}.{{new Date(course_data.date).getUTCMonth()+1}}.{{new Date(course_data.date).getUTCFullYear()}}</h5>
-      <h5 class="card-title">Стоимость курса:<br/>{{course_data.price}} рублей</h5>
+      <h5 class="card-title">Стоимость курса:<br/>{{course_data.price}} р.</h5>
       <a @click.prevent="openCourse(course_data.id)" class="btn btn-primary">Подробнее...</a>
-      <a @click="del" class="btn btn-primary">Удалить элемент</a>
+      <a @click="del" class="btn btn-primary btn-danger mt-4">Удалить курс</a>
+
     </div>
   </div>
 </div>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import {mapGetters, mapMutations} from "vuex";
 export default {
 name: "v-course-item",
   props: {
@@ -30,7 +32,13 @@ name: "v-course-item",
   ...mapMutations(['DELETE_COURSE_FROM_STATE']),
     del(){
     this.DELETE_COURSE_FROM_STATE(this.course_data.id)
+    },
+    openCourse(courseID){
+      this.$router.push('/courses/' + courseID)
     }
+  },
+  computed: {
+  ...mapGetters(['COURSES'])
   }
 }
 </script>
@@ -41,7 +49,7 @@ name: "v-course-item",
   width: 40%;
 }
 .card-text{
-  max-height: 300px;
+  max-height: 80px;
   overflow-y: hidden;
 }
 </style>

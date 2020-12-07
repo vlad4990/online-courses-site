@@ -14,6 +14,11 @@
             Курсы
           </NuxtLink>
         </li>
+        <li class="nav-item">
+          <NuxtLink active-class="active" class="nav-link" to="/about">
+            about
+          </NuxtLink>
+        </li>
       </ul>
     </div>
   </nav>
