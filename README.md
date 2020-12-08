@@ -18,8 +18,11 @@ $ npm run generate
 ```
 
 Страница со всеми курсами:
-##<img src='https://s8.hostingkartinok.com/uploads/thumbs/2020/12/a1f1371260a1c5592b425c9087d51ac1.png' alt='Image' />
+
+<a href="https://ibb.co/8K6MGwW"><img src="https://i.ibb.co/HFn7RyW/2020-12-08-23-44-28.png" alt="2020-12-08-23-44-28" border="0"></a>
 
 Страница просмотра курса и его редактирования:
-##<img src='https://s8.hostingkartinok.com/uploads/thumbs/2020/12/8e9763bb2d450b32b59ded624cf1cd6a.png' alt='Image' />
+
+<a href="https://ibb.co/kyyZZ2V"><img src="https://i.ibb.co/pPPqqj6/2020-12-08-23-50-59.png" alt="2020-12-08-23-50-59" border="0"></a>
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
