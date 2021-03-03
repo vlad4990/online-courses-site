@@ -1,17 +1,20 @@
 <template>
-  <div>
-    <a @click.prevent="sortByPrice" class="btn btn-primary">Сортировать по цене</a>
-    <a @click.prevent="sortByDate" class="btn btn-primary">Сортировать по дате</a>
-    <a @click.prevent="sortByDefault" class="btn btn-primary">Сортировать по умолчанию</a>
+  <div class="container">
+    <div class="sort__buttons">
+      <a @click.prevent="sortByPrice" class="button__site">Сортировать по цене</a>
+      <a @click.prevent="sortByDate" class="button__site">Сортировать по дате</a>
+      <a @click.prevent="sortByDefault" class="button__site">Сортировать по умолчанию</a>
+    </div>
 
 
-
-    <div class="course-items">
-      <v-course-item
-        v-for="course in catalog_courses"
-        :key="course.id"
-        :course_data="course"
-      />
+    <div>
+      <div class="course-items__inner">
+        <v-course-item
+          v-for="course in catalog_courses"
+          :key="course.id"
+          :course_data="course"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -48,9 +51,21 @@ name: "v-display-catalog",
 
 <style>
 .course-items{
+
+}
+
+.course-items__inner{
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
   align-items: center;
+  padding: 0 ;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.sort__buttons{
+  padding: 10px;
+  margin-top: 10px;
+  text-align: right;
 }
 </style>

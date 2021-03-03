@@ -1,7 +1,7 @@
 <template>
   <div class="main_page">
     <h1>Добро пожаловать на Online Courses</h1>
-    <NuxtLink to="/courses" type="button" class="btn btn-primary btn-lg">Перейти к просмотру курсов</NuxtLink>
+    <NuxtLink to="/courses" type="button" class="button__site">Перейти к просмотру курсов</NuxtLink>
   </div>
 </template>
 
@@ -17,5 +17,9 @@ export default {}
   justify-content: center;
   align-items: center;
   padding-top: 10%;
+}
+
+.button__site{
+  margin: 30px;
 }
 </style>

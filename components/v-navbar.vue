@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Online courses</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,5 +41,7 @@ name: "v-navbar",
 </script>
 
 <style scoped>
-
+.navbar{
+  background-color: #2d2d2d;
+}
 </style>

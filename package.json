@@ -13,5 +13,8 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35"
+  }
 }

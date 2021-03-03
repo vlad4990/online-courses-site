@@ -1,20 +1,22 @@
 <template>
   <div>
-    <h1>Описание Курса</h1>
-    <div class="d-flex justify-content-xl-start p-3">
-      <NuxtLink to="/courses/" type="button" class="btn btn-primary">Вернуться назад</NuxtLink>
-      <a @click="chg" class="btn btn-primary btn-danger">Редактировать курс</a>
-    </div>
-    <section>
-      <v-item-description
-        :course_description = "COURSES[COURSES.findIndex(i => i.id === ($route.params.id))]"
-      />
-    </section>
-    <a  class="btn btn-primary d-flex flex-fill btn-danger mt-5">Зона редактирования</a>
-    <v-item-change
+    <div class="container">
+      <h1>Описание Курса</h1>
+      <div class="d-flex justify-content-xl-start">
+        <NuxtLink to="/courses/" type="button" class="button__site">Вернуться назад</NuxtLink>
+      </div>
+      <section>
+        <v-item-description
+          :course_description = "COURSES[COURSES.findIndex(i => i.id === ($route.params.id))]"
+        />
+      </section>
+      <a  class="d-flex flex-fill bg-dark mt-5">Зона редактирования</a>
+      <v-item-change
+        class="change__desc__inner"
         :chandescr = "ison=!ison"
         :course_change = "COURSES[COURSES.findIndex(i => i.id === ($route.params.id))]"
-    />
+      />
+    </div>
   </div>
 </template>
 
@@ -38,5 +40,12 @@ export default {
 </script>
 
 <style scoped>
+.change__desc__inner{
+  background-color: #bebebe;
+  padding: 10px;
+}
 
+.button__site{
+  margin: 5px;
+}
 </style>

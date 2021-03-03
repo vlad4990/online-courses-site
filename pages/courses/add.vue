@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container course-item__add">
     <NuxtLink to="/courses/" type="button" class="btn btn-primary">Вернуться назад</NuxtLink>
     <h1>Заполните поля для ввода:</h1>
     <form @submit.prevent="submit">
@@ -56,5 +56,7 @@ export default {
 </script>
 
 <style scoped>
-
+.course-item__add{
+  background-color: #40464c;
+}
 </style>
