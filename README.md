@@ -18,11 +18,9 @@ $ npm run generate
 ```
 
 Страница со всеми курсами:
-
-<a href="https://ibb.co/8K6MGwW"><img src="https://i.ibb.co/HFn7RyW/2020-12-08-23-44-28.png" alt="2020-12-08-23-44-28" border="0"></a>
+<a href="https://ibb.co/JQLCd2J"><img src="https://i.ibb.co/TLXrTR3/2021-03-12-19-06-03.png" alt="2021-03-12-19-06-03" border="0"></a>
 
 Страница просмотра курса и его редактирования:
-
-<a href="https://ibb.co/kyyZZ2V"><img src="https://i.ibb.co/pPPqqj6/2020-12-08-23-50-59.png" alt="2020-12-08-23-50-59" border="0"></a>
+<a href="https://ibb.co/prm7BPW"><img src="https://i.ibb.co/Csrc3tJ/2021-03-12-19-36-48.png" alt="2021-03-12-19-36-48" border="0"></a>
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
